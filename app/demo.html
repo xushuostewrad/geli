@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/chishi.css">
     <link rel="stylesheet" href="css/demo.css">
 </head>
 
@@ -16,8 +17,10 @@
 
 
     <div id="header-wrapper"></div>
-    <div class="mainNav m11"></div>
+    <div class="mainNav m11 pr"></div>
+
     <!-- banner -->
+
     <div class="bannerM">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -35,6 +38,7 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
+
     </div>
     <!-- 热销栏  -->
     <div id="g1" class="mt10 pr erxiao container">
@@ -488,6 +492,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <div class="cai container m11">
         <div class="caiL"></div>
@@ -499,16 +504,48 @@
     <div class="footerM"></div>
     <div class="footerS"></div>
 
+    <div class="vcode">
+        <img src="images/ewm01.png" alt="">
+    </div>
+    <div id="kefu">
+        <img src="images/kefu.png" alt="">
+    </div>
+    <div class="xiangshang" style="display:none;">
+        <a href="#"><img src="images/toTop.png" alt="" srcset=""></a>
+    </div>
+
+    <div class="guanggao" style="display:none;">
+        <img src="images/leftfloat.png" alt="" srcset="">
+
+    </div>
+    <div class="guanggao1"style="display:none;">
+        <img src="images/l37.png" alt="" srcset="">
+
+    </div>
+
+    <div class="xuanfu" style="top:112.5px;display:none;">
+        <a href="#" class="an1"></a>
+        <a href="#" class="an2"></a>
+        <a href="#" class="an3"></a>
+        <a href="#" class="an4"></a>
+        <a href="#" class="an5"></a>
+        <a href="#" class="an6"></a>
+        <a href="#" class="an7"></a>
+        <a href="#" class="an8"></a>
+    </div>
+
+
     <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
+            effect: 'fade',
             centeredSlides: true,
             loop: true,
             slidesPerView: 'auto',
             loopedSlides: 6,
             autoplay: {
-                delay: 2500,
+                delay: 1500,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -522,14 +559,19 @@
         });
     </script>
     <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+
     <script>
         $('#header-wrapper').load('public.html #header-wrapper')
-        $('.mainNav').load('public.html .mainNav')
+        $('.mainNav').load('public.html .mainNav', function () {
+            $.getScript('./js/demo.js')
+        })
         $('#footer').load('public.html #footer')
         $('#footer-img').load('public.html #footer-img')
         $('.footerM').load('public.html .footerM')
         $('.footerS').load('public.html .footerS')
     </script>
+    <!-- <script src="./js/demo.js"></script> -->
+    <script src="./js/mini.js"></script>
 </body>
 
 </html>

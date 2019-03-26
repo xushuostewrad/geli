@@ -2,6 +2,7 @@
 
     height:410px;
      position: relative;
+     
 }
 .swiper-container {
     width:100%;
@@ -199,4 +200,110 @@ img{
   margin-top: 17px;
   float: left;
   background-color: #cc0000;
+}
+/* .pic-fix{
+  position: relative;
+} */
+.vcode{
+  position: fixed;
+  left:5px;
+  bottom:0;
+  z-index: 1;
+}
+#kefu{
+  position: fixed;
+  right:10px;
+  bottom:70px;
+  cursor: pointer;
+  z-index:1;
+}
+.xiangshang{
+  position: fixed;
+  right:10px;
+  bottom:0;
+  cursor: pointer;
+  opacity: 0.3;
+  z-index:1;
+}
+.xiangshang:hover{
+  opacity: 1;
+}
+.guanggao{
+  position: fixed;
+  left:43px;
+  bottom:380px;
+  z-index: 12;
+}
+.guanggao1{
+  position: fixed;
+  left:70px;
+  bottom:150px;
+  z-index: 12;
+}
+.xuanfu{
+  width: 111px;
+  height: 475px;
+  position: fixed;
+  left: 50%;
+  overflow: hidden;
+  margin-left: 515px;
+  z-index: 50;
+  display: none;
+}
+.xuanfu a{
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 42px;
+  margin-top: 1px;
+  background: url(../images/right_nav.png) no-repeat;
+  -webkit-transition: background .2s ease;
+}
+.xuanfu .an1{
+  background-position:0 0; 
+}
+.xuanfu .an1:hover{
+  background-position:-112px 0; 
+}
+.xuanfu .an2 {
+  background-position: -222px 0;
+}
+.xuanfu .an2:hover{
+  background-position:-333px 0;
+}
+.xuanfu .an3 {
+  background-position: -444px 0;
+}
+.xuanfu .an3:hover{
+background-position: -555px 0;
+}
+.xuanfu .an4 {
+  background-position: -666px 0;
+}
+.xuanfu .an4:hover{
+background-position:-778px 0;
+}
+.xuanfu .an5 {
+  background-position: -1110px 0;
+}
+.xuanfu .an5:hover{
+ background-position:-1222px 0;
+}
+.xuanfu .an6 {
+  background-position: -1332px 0;
+}
+.xuanfu .an6:hover{
+ background-position:-1444px 0;
+}
+.xuanfu .an7 {
+  background-position: -888px 0;
+}
+.xuanfu .an7:hover{
+ background-position:-1000px 0;
+}
+.xuanfu .an8 {
+  background-position: -1998px 0;
+}
+.xuanfu .an8:hover{
+ background-position:-2110px 0;
 }
