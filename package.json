@@ -26,7 +26,6 @@
     "node-sass": "^4.11.0"
   },
   "dependencies": {
-    "bootstrap": "^3.4.1",
     "swiper": "^4.5.0"
   }
 }

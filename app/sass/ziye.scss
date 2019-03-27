@@ -1,0 +1,40 @@
+.left{
+    overflow: hidden;
+    float: left;
+    width:180px;
+    margin-right: 10px;
+}
+.leftList{
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    h1{
+       font-size:14px;
+       background:#f2f2f2;
+        text-align: left;
+        padding-left:10px;
+    }
+    ul li{
+        background: #fff;
+        border-bottom: 1px solid #ededed;
+        line-height: 22px;
+        padding: 10px 8px;
+        transition: background-color .5s; 
+        a{
+            color:#999;
+            font-size: 12px;
+            &:hover{
+                color:#c11;
+            }
+         img{
+            border: 1px solid #ddd;
+            width: 160px;
+            height: 160px;
+            overflow: hidden;
+            }
+        }
+    }
+}
