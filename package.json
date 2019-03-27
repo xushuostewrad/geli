@@ -25,5 +25,11 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.11.0"
   },
+<<<<<<< HEAD
   "dependencies": {}
+=======
+  "dependencies": {
+    "swiper": "^4.5.0"
+  }
+>>>>>>> ad02b06085252f1ad2bee4c232a94498e5f9ebae
 }
