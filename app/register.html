@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="reg">
+        <div class="reg-inner">
+
+            <nav>             
+                <a href=""><img src="images/logo.png" alt=""></a>
+            </nav>
+
+            <div class="form-box">
+                <div class="left">
+                    <h3>
+                        <span>新用户注册</span>
+                        <b>已有账号？去<a href="login.html">登陆</a>></b>
+                    </h3>
+                    <!-- form表单 -->
+                    <form  class="register-form" onsubmit="return false">
+                        <ul>
+                            <li>
+                                <label for=""><b>*</b>登陆名：</label>
+                                <i></i>
+                                <input type="text" class="user-text" placeholder="邮箱/手机号" id="username" name="username"  required data-error="请输入邮箱或者手机号码">
+                                <p class="p1"></p>
+                            </li>
+                            <li>
+                                <label for=""><b>*</b>设置密码：</label>
+                                <i></i>
+                                <input type="password" class="password-text" placeholder="密码" id="password" name="password" required  data-error="请输入8-20位字符，并且必须包含数字跟字母">
+                                <p class="p2"></p>
+                            </li>
+                            <li>
+                                <label for=""><b>*</b>确认密码：</label>
+                                <i></i>
+                                <input type="password" class="password-text" placeholder="密码" id="repassword" name="repassword" required data-error="两次密码输入不一致">
+                                <p class="p3"></p>
+                            </li>
+                            <li class="li4">
+                                <label for=""><b>*</b>验证码：</label>
+                                <input type="text" class="yanzhengma" data-error="请输入验证码" name="code">   
+                                <P class="p4" id="p4"></P>                            
+                                <h6 class="random"></h6>
+                                <a href="" id="code">换一张</a>
+                                
+                            </li>
+                            <li class="li5">
+                                <input type="checkbox" class="check-text" >
+                                <span>已阅读，并同意<a href="" class="xieyi">《格力官方商城注册协议》</a></span>                         
+                            </li>
+                        </ul>
+                        <!-- <a href="" class="click-login btn"></a> -->
+                        <button type="submit" class="click-login btn">注册 </button>
+
+                    </form>
+                </div><!--表单-->
+
+                <div class="right">
+                    <a href="">
+                        <img src="images/aSD1.jpg" alt="">
+                    </a>
+                </div><!--表单图片-->
+            </div><!--from表单box-->
+        </div><!---版心-->
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+        checkInput.init('.register-form');
+    </script>
+</body>
+</html>
+
+
