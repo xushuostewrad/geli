@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <main>
+        <div class="wrapper mt10">
+            <div>
+                <a class="logo">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="cart">我的购物车</div>
+            </div>
+        </div>
+
+        <div class="cart-thead">
+            <ul class="shop">
+                <li>
+                    <div style="width:80px;margin-left: 20px" class="pa">
+                        <input type="checkbox" class="check-all">
+                        <label for='checkbox'>全选</label>
+                    </div>
+                </li>
+                <li class="sp">商品</li>
+                <li class="dj">单价</li>
+                <li class="yh">优惠</li>
+                <li class="dz">
+                    <div class="peisong">
+                        <span id="cartProvinceSelect">广东省</span>
+                        <a class="peisongbg"></a>
+                    </div>
+                </li>
+                <li class="sl">数量</li>
+                <li class="xj">小计</li>
+                <li class="cz">操作</li>
+            </ul>
+
+
+
+
+            <div class="shopCar">
+                <!-- <div class="clearfix">
+                    <ol>
+                        <li class="check">
+                            <input type="checkbox">
+                        </li>
+                        <li class="shopBox">
+                            <div class="tp">
+                                <img src="images/KH187000200_05 (3).jpg" alt="">
+                            </div>
+                            <p style="line-height:25px;">格力•云酷变频柜机_省电节能 健康洁净_KFR-72LW/NhZaB3W 冷暖3匹机 立柜式 银蓝色</p>
+                        </li>
+                        <li>¥7899.00</li>
+                        <li>-</li>
+                        <li>有货</li>
+                        <li>
+                            <span class="reduce reduceDisable">-</span>
+                            <input id="buyNum" class="numberIn" value="1">
+                            <span class="increase">+</span>
+                        </li>
+                        <li>¥7899.00</li>
+                        <li class="cartOperation">
+                            <div class="shopcartchangefont">
+                                <a>收藏</a>
+                                <a>删除</a>
+                            </div>
+                        </li>
+                    </ol>
+                </div> -->
+            </div>
+
+
+
+
+
+
+            <div class="tongji">
+                <a href="">删除选择商品</a>
+                <a href="">收藏选择商品</a>
+                <a href="" class="qingkong">清空购物车</a>
+                <em>已选商品<span>1</span>件</em>
+                <em>优惠<span>¥0.00</span></em>
+                合计（不含运费）：<span>¥7899.00</span>
+            </div>
+
+
+            <div class="jies">
+                <a href="">继续购物</a>
+                <a href="">去结算</a>
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="kong" style="margin:0 auto;">
+            <img src="images/cartempty.png" alt="">
+            <p>购物车内暂时没有商品，<em>登录</em>后可同步电脑和手机购物车</p>
+        </div>
+
+
+
+
+        <div class="tuijian" style="margin:0 auto">
+            <h1>为您推荐</h1>
+            <ul>
+                <li>
+                    <div class="img">
+                        <img src="images/tuijian1.jpg" alt="" style="width:185px;height:185px">
+                    </div>
+                    <p>品圆变频空调_智控随心 舒适有度_KFR-26GW/(26592)FNhDa-A3 白色 冷暖大1匹机 挂壁式</p>
+                    <p class="p1">¥7899.00</p>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src="images/tuijian2.jpg" alt="" style="width:185px;height:185px">
+                    </div>
+                    <p>品圆变频空调_智控随心 舒适有度_KFR-26GW/(26592)FNhDa-A3 白色 冷暖大1匹机 挂壁式</p>
+                    <p class="p1">¥7899.00</p>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src="images/tuijian2.jpg" alt="" style="width:185px;height:185px">
+                    </div>
+                    <p>品圆变频空调_智控随心 舒适有度_KFR-26GW/(26592)FNhDa-A3 白色 冷暖大1匹机 挂壁式</p>
+                    <p class="p1">¥7899.00</p>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src="images/tuijian1.jpg" alt="" style="width:185px;height:185px">
+                    </div>
+                    <p>品圆变频空调_智控随心 舒适有度_KFR-26GW/(26592)FNhDa-A3 白色 冷暖大1匹机 挂壁式</p>
+                    <p class="p1">¥7899.00</p>
+                </li>
+
+            </ul>
+            <a href="" class="btn-l"></a>
+            <a href="" class="btn-r"></a>
+        </div>
+
+
+
+    </main>
+
+
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+<script src="js/shop.js"></script>
+<script>
+    shopCar.init('.shopCar')
+
+    // var $box = document.querySelector('main');
+    // var $kong = document.querySelector('.kong');
+    // function getStyle(obj, attr) {
+    //     if (window.getComputedStyle) {
+    //         return window.getComputedStyle(obj, null)[attr]
+    //     }
+    //     return obj.currentStyle[attr];
+    // }
+    // var height = getStyle($box, 'height');
+    // function panduan() {
+    //     if (parseInt(height) > 850) {
+    //         $kong.style.display = 'none';
+    //     } else {
+    //         $kong.style.display = 'block';
+    //     }
+    // }
+
+</script>
+
+</html>
