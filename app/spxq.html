@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/chishi.css">
     <link rel="stylesheet" href="css/002a.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
@@ -16,8 +19,8 @@
 </head>
 
 <body>
-    <header></header>
-
+    <div id="header-wrapper"></div>
+    <div class="mainNav m11 pr"></div>
     <main>
         <div class="mainTop">
             <div class="mianTop_l">
@@ -503,7 +506,21 @@
         </div>
     </div>
 
-    <footer></footer>
+    <div id="footer"></div>
+    <div id="footer-img"></div>
+    <div class="footerM"></div>
+    <div class="footerS"></div>
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+    <script>
+        $('#header-wrapper').load('public.html #header-wrapper')
+        $('.mainNav').load('public.html .mainNav', function () {
+            $.getScript('./js/demo.js')
+        })
+        $('#footer').load('public.html #footer')
+        $('#footer-img').load('public.html #footer-img')
+        $('.footerM').load('public.html .footerM')
+        $('.footerS').load('public.html .footerS')
+    </script>
 </body>
 
 <script>
@@ -546,22 +563,22 @@
     var $shuliang = document.querySelector('.shuliang');
     var $gongji = document.querySelector('.gongji');
     var $scj = document.querySelector('.scj');
-    $jia.onclick = function(){
+    $jia.onclick = function () {
         $inp.value++;
         $shuliang.innerHTML = $inp.value;
         $gongji.innerHTML = $inp.value * $scj.innerHTML;
     }
-    $jian.onclick = function(){
+    $jian.onclick = function () {
         $inp.value--;
         zuixiao();
         $shuliang.innerHTML = $inp.value;
     }
-    function zuixiao(){
-        if($inp.value < 1){
+    function zuixiao() {
+        if ($inp.value < 1) {
             $inp.value = 1;
         }
     }
-    
+
 </script>
 
 </html>

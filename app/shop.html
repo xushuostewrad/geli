@@ -92,8 +92,8 @@
 
 
             <div class="jies">
-                <a href="">继续购物</a>
-                <a href="">去结算</a>
+                <a href="#" class="jxgw">继续购物</a>
+                <a href="#" class="qjs">去结算</a>
             </div>
 
 
@@ -159,6 +159,12 @@
 <script src="js/shop.js"></script>
 <script>
     shopCar.init('.shopCar')
+    $('.jxgw').on('click',function(){
+            location.href = 'demo.html'
+        })
+    $('.qjs').on('click',function(){
+        location.href = 'login.html'
+    })
 
     // var $box = document.querySelector('main');
     // var $kong = document.querySelector('.kong');
