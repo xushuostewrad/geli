@@ -6,7 +6,7 @@ var check={
     password(val){
         const reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
         return reg.test(val);
-    },
+    }
     // repassword(val){
     //     const reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
     //     return reg.test(val);
@@ -16,12 +16,11 @@ var check={
     //     return reg.test(val);
     // }
 
-
 }
 
 // 表单验证传值
 var checkInput=(function(){
-    var $requestInpAll,$p1,$p2,$p3,codeVal;
+    var $requestInpAll,$p1,$p2,$p3,$p4,codeVal;
     return{
         init(ele){          
             $form = $(ele);
@@ -30,6 +29,7 @@ var checkInput=(function(){
             $p1=document.querySelector('.p1');
             $p2=document.querySelector('.p2');
             $p3=document.querySelector('.p3');
+            $p4=document.querySelector('.p4');
 
             
             this.event();
@@ -82,10 +82,10 @@ var checkInput=(function(){
 
             // 验证验证码
             $('.yanzhengma').on('blur',function(){  
-                // console.log(codeVal);            
-                if($('.yanzhengma').val()==codeVal){
-                    $('.p4').html('');
-                    $('.p4').addClass("bg-success");
+                console.log(codeVal);            
+                if($(this).val()==codeVal){
+                    $p4.innerHTML = '';
+                    $p4.className = 'bg-success';
                 }else{
                     $('.p4').html('请输入验证码');
                     $('.p4').addClass("lose");
@@ -93,6 +93,37 @@ var checkInput=(function(){
                    
                 }
             })
+            // 验证复选框是否选中
+            $('.check-text').on('click',function(){
+                // console.log(1);
+                if($(this).prop('checked')){
+                    // 点击验证登陆
+                    $('.btn').on('click',function(){
+                        for (let i = 0; i < $requestInpAll.length-1; i++) {                   
+                            const $input = $requestInpAll[i];
+                            const $p = $input.nextElementSibling;
+                            if ($p.className != 'bg-success') {
+                                $input.focus();
+                                return false;
+                            }
+                        }
+                        let username = $requestInpAll[0].value;
+                        let password = $requestInpAll[1].value;
+                        let repassword = $requestInpAll[2].value;
+                        $.post('server/register.php',{username,password,repassword},function(data){
+                            data = JSON.parse(data);
+                            if(data.code != '404'){
+                                alert(data.message);
+                                location.href = 'login.html';
+                            }else{
+                                alert(data.message);
+                                history.go(0);
+                            }
+                        })    
+                    })
+                }
+            })
+
 
             $('#code').on('click',function(){
                 self.createCode();
@@ -102,30 +133,8 @@ var checkInput=(function(){
                 self.createCode();
             }
                         
-            // 点击验证登陆
-            $('.btn').on('click',function(){
-                for (let i = 0; i < $requestInpAll.length-1; i++) {                   
-                    const $input = $requestInpAll[i];
-                    const $p = $input.nextElementSibling;
-                    if ($p.className != 'bg-success') {
-                        $input.focus();
-                        return false;
-                    }
-                }
-                let username = $requestInpAll[0].value;
-                let password = $requestInpAll[1].value;
-                let repassword = $requestInpAll[2].value;
-                $.post('server/register.php',{username,password,repassword},function(data){
-                    data = JSON.parse(data);
-                    if(data.code != '404'){
-                        alert(data.message);
-                        location.href = 'login.html';
-                    }else{
-                        alert(data.message);
-                        history.go(0);
-                    }
-                })    
-            })
+          
+            
         },
 
 

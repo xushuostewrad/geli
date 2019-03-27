@@ -13,7 +13,7 @@ var test = (function () {
                     data = JSON.parse(data);
                     if(data.code != '404'){
                         document.cookie = `${data.id}; path=/`;
-                        location.href = 'indexof.html';
+                        location.href = 'demo.html';
                     }else{
                         alert(data.message);
                     }
