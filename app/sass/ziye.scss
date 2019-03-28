@@ -82,9 +82,97 @@
             margin-left:5px; 
             height:20px;
             width:70px;
-
+            text-align: center; 
+            &:hover{
+                
+                background:red;  
+            }
         }
       } 
-    
     }
+}
+.tc{
+    text-align: center;
+}
+.showAll{
+    border-top: 1px solid #ddd;
+    span{
+        display: inline-block;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        width: 150px;
+        height: 24px;
+        font: normal 14px/24px "微软雅黑";
+        cursor: pointer;
+        margin-top: -1px;
+        margin-bottom: 3px;
+        color: #999;
+    }
+} 
+.desc{
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: 20px;
+    background: #f7f7f7;
+    dt{
+        margin-left:5px;
+    }
+    dl{
+        float: left;
+    }
+}
+.fl{
+    display: inline;  
+    float: left;
+    dd{
+        border: 1px solid #ddd;
+        margin-right: 5px;
+        height: 24px;
+        width:40px;
+        line-height: 24px;
+        text-align: center;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+}
+.sort{
+     float:left;
+dt{
+    float: left;
+    line-height: 26px;
+    height: 26px;
+}
+dd{
+    float:left;
+}}
+.curr{
+   
+    background: #c00;
+    font-weight: bold;
+    border-color: #c00
+    a{
+
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+    }
+} 
+.down a{
+    color:#fff;
+    height:12px;
+    line-height: 12px;
+    width:30px;
+    text-align: center;
+}
+.erxiao ul li{
+    margin-left:12px;
+}
+.desc .upright{
+    display: block;
+    height:24px;
+    line-hieght:24px;
+    float:right;
+    margin-top:5px;
 }
