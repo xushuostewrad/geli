@@ -52,20 +52,23 @@ var checkInput=(function(){
                 $p2.className='lose';  
             })
             // $('#password').on('blur',function(){
-            //     if($('#password').val==''){
+            //     if($('#password').val===''){
             //         $p2.innerHTML='请输入密码';
             //         $p2.className='lose';  
-            //     }
-                
+            //     }               
             // })
 
             $('#repassword').on('blur',function(){
                 let text = $('#repassword').val();  
                 // console.log(text)
-                if (text == $('#password').val()) {
+                if (text == $('#password').val()&&text!='') {
                             $p3.innerHTML = '';
                             $p3.className = 'bg-success';
-                        } else {
+                        }else if(text===''){
+                            $p3.innerHTML = '请再次输入密码';
+                            $p3.className = 'lose';
+                        }
+                         else{
                             $p3.innerHTML = '两次密码输入不一致';
                             $p3.className = 'lose';
                             console.log(111)
