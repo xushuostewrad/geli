@@ -2,7 +2,7 @@
     overflow: hidden;
     float: left;
     width:180px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .leftList{
     overflow: hidden;
@@ -36,5 +36,55 @@
             overflow: hidden;
             }
         }
+    }
+}
+.right{
+    float:right;
+    overflow: hidden;
+    width:770px;
+}
+.screenCon {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px 0;
+    dl{
+        padding:5px 0;
+        overflow: hidden;
+      dt{
+        display: block;
+        float: left;
+        font-size:12px;
+        font-weight: 900;
+        text-align: right;
+        width: 70px;
+       
+      } 
+      dd{
+        float: left;
+        display: block;
+        width: 618px;
+        strong a{
+            display: block;
+            float: left;
+           height:20px;
+           width:40px;
+           text-align: center;
+           background:red;
+           color: #000;
+           margin-right:10px;
+           margin-bottom:10px;
+        }
+        span a{
+            display: block;
+            float: left;
+            margin-left:5px; 
+            height:20px;
+            width:70px;
+
+        }
+      } 
+    
     }
 }

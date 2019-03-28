@@ -13,6 +13,23 @@ var shopCar = (function () {
         },
         event: function () {
             var _this = this;
+            $checkTotal.click(function () {
+                var bool = $(this).prop('checked')
+                if (bool) {
+                    $('input').prop('checked', true);
+                } else {
+                    $('input').prop('checked', false);
+                }
+            })
+            $box.on('click', '.check input', function () {
+                if (!$(this).prop('checked')) {
+                    $checkTotal.prop('checked', false);
+                } else if ($(this).prop('checked')) {
+                    $checkTotal.prop('checked', true);
+                }
+
+            })
+
             $box.on('click', '.del', function () {
                 var index = $(this).index('.del');
                 shopData.splice(index, 1);
