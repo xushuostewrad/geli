@@ -11,8 +11,9 @@ var test = (function () {
                 let password = $('#password').val();
                 $.post('server/login.php',{username,password},function(data){
                     data = JSON.parse(data);
+                    console.log(data)
                     if(data.code != '404'){
-                        document.cookie = `${data.id}; path=/`;
+                        document.cookie = `${data.username}; path=/`;
                         location.href = 'demo.html';
                     }else{
                         alert(data.message);

@@ -14,3 +14,12 @@ $('#login').on('click',function(){
 $('#register').on('click',function(){
     location.href = 'register.html'
 })
+
+// cookie
+var username = document.cookie;
+console.log(username)
+if(username!=''){
+    $('.user-cookie').html(document.cookie);
+    $('#register').css("display","none")
+}
+

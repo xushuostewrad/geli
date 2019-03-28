@@ -7,7 +7,7 @@
     $db = new DB();
 	  $result = $db -> fetch($sql, "object");
     if($result) {
-		  $arr = array('code' => '200','id' => $result->id);
+		  $arr = array('code' => '200','username' => $result->username);
     } else {
 		  $arr = array('code' => '404','message' => '登录失败，用户名或密码错误');
     }
