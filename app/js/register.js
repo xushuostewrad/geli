@@ -7,15 +7,6 @@ var check={
         const reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
         return reg.test(val);
     }
-    // repassword(val){
-    //     const reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
-    //     return reg.test(val);
-    // },
-    // code(val){
-    //     const reg=/^\w{1,4}$/;
-    //     return reg.test(val);
-    // }
-
 }
 
 // 表单验证传值
@@ -38,7 +29,7 @@ var checkInput=(function(){
         },
         event(){
             const self = this;           
-            for (var i = 0; i < $requestInpAll.length-3; i++) {
+            for (var i = 0; i < $requestInpAll.length-4; i++) {
                 $requestInpAll[i].onblur = function () {
                     self.tips(this);
                 }
@@ -47,25 +38,48 @@ var checkInput=(function(){
                 $p1.innerHTML='请输入邮箱或者手机号码';
                 $p1.className='lose';
             })
+            $('#username').on('blur',function(){
+                let userval=$('#username').val();
+                const reg=/^1[35789]\d{9}$/;
+                if(reg.test(userval)){
+                    $('.phone').css("display","block");
+                }else{
+                    $('.phone').css("display","none");
+                }
+            })
+
+
+            $('.phone-text').on('blur',function(){
+                if($('.phone-text').val()===''){
+                    $('.p6').html('请输入手机验证码');
+                    $('.p6').addClass("lose");
+                    $('.p6').css("color","red");  
+                }else{
+                    $('.p6').html('');
+                    $('.p6').addClass("bg-success");
+                }
+                
+            })
+
+
+            
             $('#password').on('focus',function(){
                 $p2.innerHTML='8-12位字符，并且必须包含数字跟字母';
                 $p2.className='lose';  
             })
-            // $('#password').on('blur',function(){
-            //     if($('#password').val==''){
-            //         $p2.innerHTML='请输入密码';
-            //         $p2.className='lose';  
-            //     }
-                
-            // })
+
 
             $('#repassword').on('blur',function(){
                 let text = $('#repassword').val();  
                 // console.log(text)
-                if (text == $('#password').val()) {
+                if (text == $('#password').val()&&text!='') {
                             $p3.innerHTML = '';
                             $p3.className = 'bg-success';
-                        } else {
+                        }else if(text===''){
+                            $p3.innerHTML = '请再次输入密码';
+                            $p3.className = 'lose';
+                        }
+                         else{
                             $p3.innerHTML = '两次密码输入不一致';
                             $p3.className = 'lose';
                             console.log(111)
@@ -99,7 +113,7 @@ var checkInput=(function(){
                 if($(this).prop('checked')){
                     // 点击验证登陆
                     $('.btn').on('click',function(){
-                        for (let i = 0; i < $requestInpAll.length-1; i++) {                   
+                        for (let i = 0; i < $requestInpAll.length-2; i++) {                   
                             const $input = $requestInpAll[i];
                             const $p = $input.nextElementSibling;
                             if ($p.className != 'bg-success') {

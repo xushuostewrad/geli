@@ -82,18 +82,18 @@
 
 
             <div class="tongji">
-                <a href="">删除选择商品</a>
-                <a href="">收藏选择商品</a>
-                <a href="" class="qingkong">清空购物车</a>
-                <em>已选商品<span>1</span>件</em>
+                <a class="shanchu">删除选择商品</a>
+                <a>收藏选择商品</a>
+                <a class="qingkong">清空购物车</a>
+                <em>已选商品<span class="yixuan">1</span>件</em>
                 <em>优惠<span>¥0.00</span></em>
-                合计（不含运费）：<span>¥7899.00</span>
+                合计（不含运费）：<span>￥</span><span class="heji">7899.00</span>
             </div>
 
 
             <div class="jies">
                 <a href="#" class="jxgw">继续购物</a>
-                <a href="#" class="qjs">去结算</a>
+                <a href="#" onclick="overlay()">去结算</a>
             </div>
 
 
@@ -144,14 +144,19 @@
                 </li>
 
             </ul>
-            <a href="" class="btn-l"></a>
-            <a href="" class="btn-r"></a>
+            <a class="btn-l"></a>
+            <a class="btn-r"></a>
         </div>
 
 
 
     </main>
-
+    <div id="modal-overlay" style="visibility: hidden;">
+        <div class="modal-data">
+            <p style="font-size: 25px;">兄弟，你买不起哦！！！ </p>
+            <a class="qujies" onclick="overlay()">不买了</a>
+        </div>
+    </div>
 
 
 </body>
@@ -162,11 +167,15 @@
     $('.jxgw').on('click',function(){
             location.href = 'demo.html'
         })
-    $('.qjs').on('click',function(){
-        location.href = 'login.html'
-    })
+    // $('.qjs').on('click',function(){
+    //     location.href = 'login.html'
+    // })
 
-   
+    function overlay(){
+        var e1 = document.getElementById('modal-overlay');
+        e1.style.visibility = (e1.style.visibility == "visible")? "hidden" : "visible";
+    }
+
 
 </script>
 

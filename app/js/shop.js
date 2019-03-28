@@ -21,6 +21,16 @@ var shopCar = (function () {
                     $('input').prop('checked', false);
                 }
             })
+            $('.shanchu').on('click', function () {
+                if ($('.check input').prop('checked')) {
+                    var index = $(this).index('.del');
+                    shopData.splice(index, 1);
+                    _this.insertData(shopData);
+                    _this.setCarData();
+                    _this.panduan();
+                }
+            })
+
             $box.on('click', '.check input', function () {
                 if (!$(this).prop('checked')) {
                     $checkTotal.prop('checked', false);
@@ -104,6 +114,9 @@ var shopCar = (function () {
                 </ol>
             </div>
                 `
+                $('.yixuan').html(x.count);
+                $('.heji').html(x.count * x.price);
+
                 $box.append(htmlTemplate);
             })
         },
