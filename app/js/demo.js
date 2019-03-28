@@ -8,18 +8,23 @@ $(".categorysT").hover(function(){
 $('.carMini').on('click',function(){
     location.href = 'spxq.html'
 })
-$('#login').on('click',function(){
-    location.href = 'login.html'
-})
-$('#register').on('click',function(){
-    location.href = 'register.html'
-})
+
 
 // cookie
 var username = document.cookie;
 console.log(username)
 if(username!=''){
     $('.user-cookie').html(document.cookie);
-    $('#register').css("display","none")
+    $('#register').html("注销");
+    $('#register').on('click',function(){
+        location.href = 'login.html'
+    })
+}else{
+    $('#login').on('click',function(){
+    location.href = 'login.html'
+    })
+    $('#register').on('click',function(){
+        location.href = 'register.html'
+    })
 }
 

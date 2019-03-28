@@ -60,9 +60,7 @@ var checkInput=(function(){
                 }
                 
             })
-
-
-            
+         
             $('#password').on('focus',function(){
                 $p2.innerHTML='8-12位字符，并且必须包含数字跟字母';
                 $p2.className='lose';  
@@ -180,4 +178,20 @@ var checkInput=(function(){
             codeV.innerHTML = codeVal;
         }        
     }
+
 }())
+var flag=1,j=60;
+function countDown() {
+    j = j - 1;
+    $(".phone-a").html(j + "秒后重新发送");
+    if (j == 0) {
+        $(".phone-a").html("获取手机验证码");
+        flag = 1;
+        j = 60;
+        return;
+    }
+    setTimeout('countDown()', 1000);
+} 
+$('.phone-a').on('click',function(){               
+    countDown();
+ })
