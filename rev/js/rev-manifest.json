@@ -1,4 +1,11 @@
 {
-  "js/a.js": "js/a-08f7a20124.js",
-  "js/api.js": "js/api-8971778a9c.js"
+  "js/002a.js": "js/002a-af53174bc5.js",
+  "js/002b.js": "js/002b-a075c96e94.js",
+  "js/demo.js": "js/demo-7ef3477a2f.js",
+  "js/jquery-3.3.1.min.js": "js/jquery-3.3-4af699d813.1.min.js",
+  "js/jquery.cookie.js": "js/jquery-099fd4dbf1.cookie.js",
+  "js/login.js": "js/login-8938243066.js",
+  "js/mini.js": "js/mini-cf503f1b42.js",
+  "js/register.js": "js/register-aef5188837.js",
+  "js/shop.js": "js/shop-94c3bb4862.js"
 }

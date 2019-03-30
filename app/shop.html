@@ -85,9 +85,9 @@
                 <a class="shanchu">删除选择商品</a>
                 <a>收藏选择商品</a>
                 <a class="qingkong">清空购物车</a>
-                <em>已选商品<span class="yixuan">1</span>件</em>
+                <em>已选商品<span class="yixuan">0</span>件</em>
                 <em>优惠<span>¥0.00</span></em>
-                合计（不含运费）：<span>￥</span><span class="heji">7899.00</span>
+                合计（不含运费）：<span>￥</span><span class="heji"></span>
             </div>
 
 
@@ -155,6 +155,7 @@
         <div class="modal-data">
             <p style="font-size: 25px;">兄弟，你买不起哦！！！ </p>
             <a class="qujies" onclick="overlay()">不买了</a>
+            <a class="qujies1" onclick="overlay()">我非要买</a>
         </div>
     </div>
 
@@ -166,6 +167,9 @@
     shopCar.init('.shopCar')
     $('.jxgw').on('click',function(){
             location.href = 'demo.html'
+        })
+        $('.qujies1').on('click',function(){
+            location.href = 'login.html';
         })
     // $('.qjs').on('click',function(){
     //     location.href = 'login.html'

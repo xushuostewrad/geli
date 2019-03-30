@@ -416,8 +416,24 @@ a {
   display: block;
   text-align: center;
   line-height: 40px;
-  margin: auto;
+  /* margin: auto; */
   font-size: 16px;
   border-radius: 8px;
+}
+
+.qujies1 {
+  width: 70px;
+  height: 40px;
+  background: pink;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.modal-data a {
+  float: left;
   margin-top: 20px;
+  margin-left: 50px;
 }

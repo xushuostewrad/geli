@@ -1,0 +1,79 @@
+.container{
+    width: 1226px;
+    margin:0 auto;
+    background:#999;
+}
+.pic{
+   width:234px;
+   height:280px;
+   
+   margin-bottom: 0;
+}
+.col-md-2{
+    width:234px;
+    transition: all .3s linear;
+}
+.col-md-2:hover{
+    /* transform: translateZ(2px); */
+    box-shadow: 0px 5px 6px 6px #ccc;
+    transform: translateY(-5px);
+    transition: all 0.3s linear;
+}
+.col-md-2:hover .box{
+    transform: translateY(-50px);
+            transition: 0.5s;
+
+}
+.pic img{
+    border:0;
+}
+.pic2{
+    width:234px;
+    margin-right:10px;
+    background: #fff;
+}
+/* .col-md-2{
+    background: #fff; 
+} */
+.pic2 img{
+
+    border:0;
+}
+.xiyiji{
+    width:204px;
+    height:50px;
+    background: #fff;  
+    overflow: hidden;
+}
+.xiyiji p{
+    color: orange;
+    font-size: 12px;
+    text-align: center;
+}
+.xiyiji h4{
+    font-size:16px;
+    text-align: center;
+    line-height:0;
+}
+.box{
+    width:234px;
+    height:70px;
+    display: block;
+    margin-left:-15px;
+    margin-top:13px;
+    background:orange;
+    z-index: 2;
+}
+.box p{
+    font-size: 12px;
+    color: #fff;
+    /* text-align: center; */
+}
+.row{
+    position: relative;
+    perspective: 150;
+    perspective-origin: 10% 10%;
+    -webkit-perspective: 150;
+    -webkit-perspective-origin: 10% 10%;
+}
+

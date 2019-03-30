@@ -17,3 +17,25 @@ $('#register').on('click',function(){
 $('.searchBtn').on('click',function(){
     location.href = 'ziye.html';
 })
+var xs =$('.xiangshang');
+var gg =$('.guanggao');
+var gg1 =$('.guanggao1');
+var xf =$('.xuanfu');
+if(document.documentElement.scrollTop<=300){
+    gg.css({display:'none'});
+    gg1.css({display:'none'});
+    xs.css({display:'none'});
+    xf.css({display:'none'});}
+$(window).scroll( function() { 
+    if(document.documentElement.scrollTop<=300){
+        gg.css({display:'none'});
+        gg1.css({display:'none'});
+        xs.css({display:'none'});
+        xf.css({display:'none'});
+    }else{
+        gg.css({display:'block'});
+        gg1.css({display:'block'});
+        xs.css({display:'block'});
+        xf.css({display:'block'});
+    }
+} );

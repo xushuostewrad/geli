@@ -13,7 +13,9 @@ body, button, input, select, textarea{
     font: 12px Arial,Verdana,"微软雅黑";
 }
 
-
+a{
+    cursor: pointer;
+}
 main{
     width: 100%;
 }
@@ -124,6 +126,9 @@ main{
     top:430px;
     right:40px;
 }
+.mianTop_r{
+    height: 500px;;
+}
 .mianTop_r h1{
     max-height: 5em;
     text-overflow: ellipsis;
@@ -150,11 +155,11 @@ main{
 }
 .mianTop_r dd{
     float: left;
-    height: 28px;
-    line-height: 28px;
+    height: 18px;
+    line-height: 25px;
 }
 .mianTop_r dd strong{
-    font: 700 24px/24px Verdana,Arial;
+    font: 700 20px/20px Verdana,Arial;
     color: #c00
 }
 .mianTop_r em{
@@ -225,15 +230,15 @@ main{
 }
 .shoucang p{
     line-height: 12px;
-    margin-top:30px;
+    margin-top:10px;
 }
 .fenqiShuoming{
-    margin-top: 19px;
+    margin-top: 10px;
 }
 .mainTop .mianTop_l ul .active{
     border:2px solid red;
 }
-// wrapper
+
 
 .wrapper{
     width:980px;

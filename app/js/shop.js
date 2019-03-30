@@ -28,6 +28,8 @@ var shopCar = (function () {
                     _this.insertData(shopData);
                     _this.setCarData();
                     _this.panduan();
+                    $('.yixuan').html(shopData.count);
+                    $('.heji').html(shopData.count * shopData.price);
                 }
             })
 
@@ -45,8 +47,9 @@ var shopCar = (function () {
                 shopData.splice(index, 1);
                 _this.insertData(shopData);
                 _this.setCarData();
-
                 _this.panduan();
+                $('.yixuan').html(shopData.count);
+                $('.heji').html(shopData.count * shopData.price);
             })
             $box.on('change', '.numberIn', function () {
                 var val = $(this).val() - 0;
@@ -116,6 +119,7 @@ var shopCar = (function () {
                 `
                 $('.yixuan').html(x.count);
                 $('.heji').html(x.count * x.price);
+
 
                 $box.append(htmlTemplate);
             })
